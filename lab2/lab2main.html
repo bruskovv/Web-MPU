@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../lab1/lab1style.css"> 
     <link rel="stylesheet" href="lab2style.css"> 
+    <link rel="stylesheet" href="../lab3/lab3style.css"> 
 </head>
 <body>
     <header>
@@ -98,6 +99,79 @@
             </div>
         </section>
     </main>
+    <section class="order-section">
+        <h2 class="order-title">Сделать заказ</h2>
+        <form class="order-form" action="https://httpbin.org/post" method="post">
+            <div class="order-columns">
+            <div class="order-column">
+                <h3 class="order-subtitle">Ваш заказ</h3>
+                <label for="order-soup">Суп</label>
+                <select id="order-soup" name="soup" required>
+                <option value="">-- Выберите суп --</option>
+                <option value="gaspacho">Борщец</option>
+                <option value="mushroom_puree">Гаспачо</option>
+                <option value="norwegian">Норвежский суп</option>
+                </select>
+
+                <label for="order-main">Главное блюдо</label>
+                <select id="order-main" name="main_dish" required>
+                <option value="">-- Выберите главное блюдо --</option>
+                <option value="potato_mushrooms">Жареная картошка с грибами</option>
+                <option value="lasagna">Паста с креветками</option>
+                <option value="chicken_cutlet_puree">Макароны с сосисками</option>
+                </select>
+
+                <label for="order-drink">Напиток</label>
+                <select id="order-drink" name="drink" required>
+                <option value="">-- Выберите напиток --</option>
+                <option value="orange_juice">Апельсиновый сок</option>
+                <option value="apple_juice">Яблочный сок</option>
+                <option value="carrot_juice">Морковный сок</option>
+                </select>
+
+                <label for="order-comment">Комментарии к заказу</label>
+                <textarea id="order-comment" name="comment" rows="5" placeholder="Особые пожелания"></textarea>
+            </div>
+
+            <div class="order-column">
+                <h3 class="order-subtitle">Ваши данные</h3>
+                <label for="client-name">Имя</label>
+                <input type="text" id="client-name" name="name" required maxlength="32" />
+
+                <label for="client-email">Email</label>
+                <input type="email" id="client-email" name="email" required maxlength="64" />
+
+                <input type="checkbox" id="client-subscribe" name="subscribe" checked />
+                <label for="client-subscribe" class="order-checkbox-label">Получать информацию о скидках и акциях</label>
+
+                <label for="client-phone">Номер телефона</label>
+                <input type="tel" id="client-phone" name="phone" required maxlength="16" />
+
+                <label for="client-address">Адрес доставки</label>
+                <input type="text" id="client-address" name="address" required maxlength="128" />
+                <span class="order-note">Доставка осуществляется только по Москве</span>
+
+                <div class="order-time-group">
+                <span>Время доставки:</span>
+                <input type="radio" id="time-asap" name="delivery_time_type" value="asap" required />
+                <label for="time-asap">Как можно скорее</label>
+                <input type="radio" id="time-exact" name="delivery_time_type" value="exact"/>
+                <label for="time-exact">К указанному времени</label>
+                </div>
+
+                <label for="order-time">Укажите время доставки</label>
+                <input type="time" id="order-time" name="delivery_time"
+                    min="07:00" max="23:00" step="300" />
+                <span class="order-note">Доступное время доставки с 7:00 до 23:00</span>
+
+                <div class="order-form-buttons">
+                <button type="reset">Сбросить</button>
+                <button type="submit">Отправить</button>
+                </div>
+            </div>
+            </div>
+        </form>
+        </section>
     <footer id="contacts">
         <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
     </footer>

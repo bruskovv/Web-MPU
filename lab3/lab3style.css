@@ -1,0 +1,154 @@
+.order-section {
+  background: #fff;
+  margin: 50px auto 0 auto;
+  padding: 40px 30px 30px 30px;
+  border-radius: 24px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  max-width: 1100px;
+}
+
+.order-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.order-columns {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+.order-column {
+  flex: 1 1 0;
+  min-width: 340px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.order-subtitle {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.order-form label {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+.order-form select,
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form input[type="time"] {
+  font-size: 1em;
+  padding: 9px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #e3e3e3;
+  width: 100%;
+  outline: none;
+  background: #fafafa;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.order-form textarea {
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1.5px solid #e3e3e3;
+  width: 100%;
+  min-height: 85px;
+  padding: 11px 16px;
+  background: #fafafa;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.order-checkbox-label {
+  display: inline-block;
+  font-size: 1em;
+  margin-left: 7px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  font-family: 'Roboto', sans-serif;
+}
+
+.order-time-group {
+  display: flex;
+  gap: 17px;
+  font-size: 1em;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.order-time-group input[type="radio"] {
+  accent-color: #fd961a;
+}
+
+.order-form-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.order-form button[type="submit"],
+.order-form button[type="reset"] {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  background: #f1eee9;
+  color: #222;
+  border: none;
+  padding: 10px 36px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.order-form button[type="submit"]:hover,
+.order-form button[type="reset"]:hover {
+  background: #ffe5dc;
+}
+
+.order-note {
+  font-size: 0.93em;
+  color: #666;
+  margin-bottom: 6px;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .order-columns {
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+  }
+  .order-section {
+    padding: 26px 5vw;
+    max-width: 99vw;
+  }
+}
+@media (max-width: 600px) {
+  .order-section {
+    padding: 16px 2vw;
+  }
+  .order-title {
+    font-size: 1.45em;
+  }
+  .order-subtitle {
+    font-size: 1.1em;
+  }
+}
