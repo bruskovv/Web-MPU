@@ -140,19 +140,23 @@ nav.nav-menu #active {
     color: tomato;
 }
 
-#order-summary {
+.order-display {
     background: #fff;
-    padding: 24px 32px;
-    border-radius: 20px;
     margin: 30px auto;
-    max-width: 600px;
+    max-width: 700px;
+    padding: 20px 30px;
+    border-radius: 20px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-#order-summary h3 {
-    font-size: 1.4em;
-    margin-bottom: 20px;
+#order-summary {
     font-family: 'Roboto', sans-serif;
+}
+
+#order-summary h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .order-category {
@@ -164,12 +168,13 @@ nav.nav-menu #active {
 .order-category h4 {
     font-size: 1.1em;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .order-category p {
     font-size: 1em;
     color: #555;
+    margin: 4px 0;
 }
 
 .order-total {
@@ -181,10 +186,12 @@ nav.nav-menu #active {
 .order-total h4 {
     font-size: 1.2em;
     font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .order-total p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 700;
     color: tomato;
 }
+
