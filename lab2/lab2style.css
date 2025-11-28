@@ -139,3 +139,52 @@ nav.nav-menu a:hover {
 nav.nav-menu #active {
     color: tomato;
 }
+
+#order-summary {
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+#order-summary h3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.order-category {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-category h4 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.order-category p {
+    font-size: 1em;
+    color: #555;
+}
+
+.order-total {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 2px solid #333;
+}
+
+.order-total h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.order-total p {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: tomato;
+}
