@@ -288,3 +288,144 @@ nav.nav-menu #active {
     font-weight: 700;
     color: tomato;
 }
+
+/* ========== БЛОК ДОСТУПНЫЕ КОМБО ========== */
+.combo-section {
+    background: #fff;
+    margin: 50px auto;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+    max-width: 1100px;
+}
+
+.combo-section h2 {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.combo-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    border: 1px solid #e3e3e3;
+}
+
+.combo-dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.combo-dish img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.combo-dish img:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.combo-dish p {
+    font-size: 0.9em;
+    text-align: center;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.combo-dessert-note {
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Адаптивность для комбо */
+@media (max-width: 980px) {
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .combo-grid {
+        grid-template-columns: 1fr;
+    }
+    .combo-item {
+        flex-wrap: wrap;
+    }
+}
+
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.notification {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 500px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.notification h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.notification p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.notification button {
+    background: #f1eee9;
+    color: #222;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.notification button:hover {
+    background: #333;
+    color: #fff;
+}

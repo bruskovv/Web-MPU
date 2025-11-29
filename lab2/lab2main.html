@@ -5,9 +5,9 @@
     <title>Bruskov Food — Собрать ланч</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../lab1/lab1style.css"> 
-    <link rel="stylesheet" href="lab2style.css"> 
-    <link rel="stylesheet" href="../lab3/lab3style.css"> 
+    <link rel="stylesheet" href="../lab1/lab1style.css">
+    <link rel="stylesheet" href="lab2style.css">
+    <link rel="stylesheet" href="../lab3/lab3style.css">
 </head>
 <body>
     <header>
@@ -19,6 +19,7 @@
             <a href="#contacts">Контакты</a>
         </nav>
     </header>
+
     <main>
         <!-- СУПЫ -->
         <section class="menu-section soups">
@@ -30,7 +31,7 @@
             </div>
             <div id="soups-grid" class="menu-grid menu-soups"></div>
         </section>
-        
+
         <!-- ГЛАВНЫЕ БЛЮДА -->
         <section class="menu-section mains">
             <h2>Выберите главное блюдо</h2>
@@ -52,7 +53,7 @@
             </div>
             <div id="salads-grid" class="menu-grid menu-salads"></div>
         </section>
-        
+
         <!-- НАПИТКИ -->
         <section class="menu-section drinks">
             <h2>Выберите напиток</h2>
@@ -75,11 +76,106 @@
         </section>
     </main>
 
+    <!-- БЛОК ДОСТУПНЫЕ ДЛЯ ЗАКАЗА КОМБО -->
+    <section class="combo-section">
+        <h2>Доступные для заказа комбо</h2>
+        <div class="combo-grid">
+            <!-- Комбо 1: Суп + Главное + Салат + Напиток -->
+            <div class="combo-item">
+                <div class="combo-dish">
+                    <img src="soup-icon.png" alt="Суп">
+                    <p>Суп</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="main-icon.png" alt="Главное блюдо">
+                    <p>Главное блюдо</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="salad-icon.png" alt="Салат">
+                    <p>Салат</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="drink-icon.png" alt="Напиток">
+                    <p>Напиток</p>
+                </div>
+            </div>
+
+            <!-- Комбо 2: Суп + Главное + Напиток -->
+            <div class="combo-item">
+                <div class="combo-dish">
+                    <img src="soup-icon.png" alt="Суп">
+                    <p>Суп</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="main-icon.png" alt="Главное блюдо">
+                    <p>Главное блюдо</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="drink-icon.png" alt="Напиток">
+                    <p>Напиток</p>
+                </div>
+            </div>
+
+            <!-- Комбо 3: Суп + Салат + Напиток -->
+            <div class="combo-item">
+                <div class="combo-dish">
+                    <img src="soup-icon.png" alt="Суп">
+                    <p>Суп</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="salad-icon.png" alt="Салат">
+                    <p>Салат</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="drink-icon.png" alt="Напиток">
+                    <p>Напиток</p>
+                </div>
+            </div>
+
+            <!-- Комбо 4: Главное + Салат + Напиток -->
+            <div class="combo-item">
+                <div class="combo-dish">
+                    <img src="main-icon.png" alt="Главное блюдо">
+                    <p>Главное блюдо</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="salad-icon.png" alt="Салат">
+                    <p>Салат</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="drink-icon.png" alt="Напиток">
+                    <p>Напиток</p>
+                </div>
+            </div>
+
+            <!-- Комбо 5: Главное + Напиток -->
+            <div class="combo-item">
+                <div class="combo-dish">
+                    <img src="main-icon.png" alt="Главное блюдо">
+                    <p>Главное блюдо</p>
+                </div>
+                <div class="combo-dish">
+                    <img src="drink-icon.png" alt="Напиток">
+                    <p>Напиток</p>
+                </div>
+            </div>
+
+            <!-- Комбо 6: Десерт -->
+            <div class="combo-item">
+                <div class="combo-dish">
+                    <img src="dessert-icon.png" alt="Десерт">
+                    <p>Десерт</p>
+                    <span class="combo-dessert-note">(Можно добавить к любому заказу)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Форма заказа с блоком "Ваш заказ" внутри -->
     <section class="order-section">
         <h2 class="order-title">Сделать заказ</h2>
-        
-        <!-- Блок отображения заказа ВНУТРИ секции -->
+
+        <!-- Блок отображения заказа -->
         <div id="order-summary" class="order-summary-inside">
             <p>Ничего не выбрано</p>
         </div>
@@ -95,31 +191,31 @@
                 <div class="order-column">
                     <h3 class="order-subtitle">Ваши данные</h3>
                     <label for="client-name">Имя</label>
-                    <input type="text" id="client-name" name="name" required maxlength="32" />
+                    <input type="text" id="client-name" name="name" required maxlength="32">
 
                     <label for="client-email">Email</label>
-                    <input type="email" id="client-email" name="email" required maxlength="64" />
+                    <input type="email" id="client-email" name="email" required maxlength="64">
 
-                    <input type="checkbox" id="client-subscribe" name="subscribe" checked />
+                    <input type="checkbox" id="client-subscribe" name="subscribe" checked>
                     <label for="client-subscribe" class="order-checkbox-label">Получать информацию о скидках и акциях</label>
 
                     <label for="client-phone">Номер телефона</label>
-                    <input type="tel" id="client-phone" name="phone" required maxlength="16" />
+                    <input type="tel" id="client-phone" name="phone" required maxlength="16">
 
                     <label for="client-address">Адрес доставки</label>
-                    <input type="text" id="client-address" name="address" required maxlength="128" />
+                    <input type="text" id="client-address" name="address" required maxlength="128">
                     <span class="order-note">Доставка осуществляется только по Москве</span>
 
                     <div class="order-time-group">
                         <span>Время доставки:</span>
-                        <input type="radio" id="time-asap" name="delivery_time_type" value="asap" required />
+                        <input type="radio" id="time-asap" name="delivery_time_type" value="asap" required>
                         <label for="time-asap">Как можно скорее</label>
-                        <input type="radio" id="time-exact" name="delivery_time_type" value="exact"/>
+                        <input type="radio" id="time-exact" name="delivery_time_type" value="exact">
                         <label for="time-exact">К указанному времени</label>
                     </div>
 
                     <label for="order-time">Укажите время доставки</label>
-                    <input type="time" id="order-time" name="delivery_time" min="07:00" max="23:00" step="300" />
+                    <input type="time" id="order-time" name="delivery_time" min="07:00" max="23:00" step="300">
                     <span class="order-note">Доступное время доставки с 7:00 до 23:00</span>
 
                     <div class="order-form-buttons">
@@ -139,5 +235,6 @@
     <script src="../lab4/dishes.js"></script>
     <script src="../lab4/display.js"></script>
     <script src="../lab4/order.js"></script>
+    <script src="../lab4/validation.js"></script>
 </body>
 </html>
