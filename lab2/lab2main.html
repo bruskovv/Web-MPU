@@ -75,16 +75,15 @@
         </section>
     </main>
 
-    <!-- Блок отображения заказа -->
-    <section class="order-display">
-        <div id="order-summary">
-            <p>Ничего не выбрано</p>
-        </div>
-    </section>
-
-    <!-- Форма заказа -->
+    <!-- Форма заказа с блоком "Ваш заказ" внутри -->
     <section class="order-section">
         <h2 class="order-title">Сделать заказ</h2>
+        
+        <!-- Блок отображения заказа ВНУТРИ секции -->
+        <div id="order-summary" class="order-summary-inside">
+            <p>Ничего не выбрано</p>
+        </div>
+
         <form class="order-form" action="https://httpbin.org/post" method="post">
             <div class="order-columns">
                 <div class="order-column">

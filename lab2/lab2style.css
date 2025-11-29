@@ -195,6 +195,7 @@ nav.nav-menu #active {
     color: tomato;
 }
 
+/* Стили для фильтров */
 .filters {
     display: flex;
     gap: 10px;
@@ -222,4 +223,68 @@ nav.nav-menu #active {
     color: #00a651;
     font-weight: 700;
     text-decoration: underline;
+}
+
+/* Блок "Ваш заказ" внутри секции заказа */
+.order-summary-inside {
+    background: #f9f9f9;
+    padding: 24px 32px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid #e3e3e3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.order-summary-inside h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.order-summary-inside > p {
+    font-size: 1.1em;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+.order-summary-inside .order-category {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-summary-inside .order-category:last-of-type {
+    border-bottom: none;
+}
+
+.order-summary-inside .order-category h4 {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.order-summary-inside .order-category p {
+    font-size: 1em;
+    color: #555;
+    margin: 4px 0;
+}
+
+.order-summary-inside .order-total {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 2px solid #333;
+}
+
+.order-summary-inside .order-total h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.order-summary-inside .order-total p {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: tomato;
 }
