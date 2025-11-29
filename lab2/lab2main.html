@@ -20,22 +20,58 @@
         </nav>
     </header>
     <main>
-        <!-- Супы -->
+        <!-- СУПЫ -->
         <section class="menu-section soups">
             <h2>Выберите суп</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="soup" data-kind="fish">рыбный</button>
+                <button class="filter-btn" data-category="soup" data-kind="meat">мясной</button>
+                <button class="filter-btn" data-category="soup" data-kind="veg">вегетарианский</button>
+            </div>
             <div id="soups-grid" class="menu-grid menu-soups"></div>
         </section>
         
-        <!-- Главные блюда -->
+        <!-- ГЛАВНЫЕ БЛЮДА -->
         <section class="menu-section mains">
             <h2>Выберите главное блюдо</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="main" data-kind="fish">рыбное</button>
+                <button class="filter-btn" data-category="main" data-kind="meat">мясное</button>
+                <button class="filter-btn" data-category="main" data-kind="veg">вегетарианское</button>
+            </div>
             <div id="mains-grid" class="menu-grid menu-mains"></div>
         </section>
+
+        <!-- САЛАТЫ И СТАРТЕРЫ -->
+        <section class="menu-section salads">
+            <h2>Выберите салат или стартер</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="salad" data-kind="fish">рыбный</button>
+                <button class="filter-btn" data-category="salad" data-kind="meat">мясной</button>
+                <button class="filter-btn" data-category="salad" data-kind="veg">вегетарианский</button>
+            </div>
+            <div id="salads-grid" class="menu-grid menu-salads"></div>
+        </section>
         
-        <!-- Напитки -->
+        <!-- НАПИТКИ -->
         <section class="menu-section drinks">
             <h2>Выберите напиток</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="drink" data-kind="cold">холодный</button>
+                <button class="filter-btn" data-category="drink" data-kind="hot">горячий</button>
+            </div>
             <div id="drinks-grid" class="menu-grid menu-drinks"></div>
+        </section>
+
+        <!-- ДЕСЕРТЫ -->
+        <section class="menu-section desserts">
+            <h2>Выберите десерт</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="dessert" data-kind="small">маленькая порция</button>
+                <button class="filter-btn" data-category="dessert" data-kind="medium">средняя порция</button>
+                <button class="filter-btn" data-category="dessert" data-kind="large">большая порция</button>
+            </div>
+            <div id="desserts-grid" class="menu-grid menu-desserts"></div>
         </section>
     </main>
 
@@ -52,31 +88,7 @@
         <form class="order-form" action="https://httpbin.org/post" method="post">
             <div class="order-columns">
                 <div class="order-column">
-                    <h3 class="order-subtitle">Ваш заказ</h3>
-                    <label for="order-soup">Суп</label>
-                    <select id="order-soup" name="soup" required>
-                        <option value="">-- Выберите суп --</option>
-                        <option value="gaspacho">Гаспачо</option>
-                        <option value="borshec">Борщец</option>
-                        <option value="norwegian_soup">Норвежский суп</option>
-                    </select>
-
-                    <label for="order-main">Главное блюдо</label>
-                    <select id="order-main" name="main_dish" required>
-                        <option value="">-- Выберите главное блюдо --</option>
-                        <option value="potato_mushrooms">Жареная картошка с грибами</option>
-                        <option value="pasta_shrimps">Паста с креветками</option>
-                        <option value="macaroni_sausages">Макароны с сосисками</option>
-                    </select>
-
-                    <label for="order-drink">Напиток</label>
-                    <select id="order-drink" name="drink" required>
-                        <option value="">-- Выберите напиток --</option>
-                        <option value="orange_juice">Апельсиновый фреш</option>
-                        <option value="apple_juice">Яблочный фреш</option>
-                        <option value="carrot_juice">Морковный фреш</option>
-                    </select>
-
+                    <h3 class="order-subtitle">Комментарий</h3>
                     <label for="order-comment">Комментарии к заказу</label>
                     <textarea id="order-comment" name="comment" rows="5" placeholder="Особые пожелания"></textarea>
                 </div>

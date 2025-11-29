@@ -195,3 +195,31 @@ nav.nav-menu #active {
     color: tomato;
 }
 
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: #007a3d;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.filter-btn:hover {
+    color: #005a2d;
+    text-decoration: underline;
+}
+
+.filter-btn.active {
+    color: #00a651;
+    font-weight: 700;
+    text-decoration: underline;
+}

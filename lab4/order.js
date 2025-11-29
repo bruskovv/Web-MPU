@@ -2,7 +2,9 @@
 const selectedDishes = {
     soup: null,
     main: null,
-    drink: null
+    salad: null,
+    drink: null,
+    dessert: null
 };
 
 // Функция выбора блюда
@@ -34,34 +36,56 @@ function updateOrderDisplay() {
     let orderHTML = '<h3>Ваш заказ</h3>';
     
     // Суп
-    orderHTML += '<div class="order-category">';
-    orderHTML += '<h4>Суп</h4>';
-    if (selectedDishes.soup) {
-        orderHTML += `<p>${selectedDishes.soup.name} ${selectedDishes.soup.price}₽</p>`;
-    } else {
-        orderHTML += '<p>Блюдо не выбрано</p>';
+    if (selectedDishes.soup || selectedDishes.main || selectedDishes.salad || selectedDishes.drink || selectedDishes.dessert) {
+        orderHTML += '<div class="order-category">';
+        orderHTML += '<h4>Суп</h4>';
+        if (selectedDishes.soup) {
+            orderHTML += `<p>${selectedDishes.soup.name} ${selectedDishes.soup.price}₽</p>`;
+        } else {
+            orderHTML += '<p>Блюдо не выбрано</p>';
+        }
+        orderHTML += '</div>';
+        
+        // Главное блюдо
+        orderHTML += '<div class="order-category">';
+        orderHTML += '<h4>Главное блюдо</h4>';
+        if (selectedDishes.main) {
+            orderHTML += `<p>${selectedDishes.main.name} ${selectedDishes.main.price}₽</p>`;
+        } else {
+            orderHTML += '<p>Блюдо не выбрано</p>';
+        }
+        orderHTML += '</div>';
+        
+        // Салат/стартер
+        orderHTML += '<div class="order-category">';
+        orderHTML += '<h4>Салат/стартер</h4>';
+        if (selectedDishes.salad) {
+            orderHTML += `<p>${selectedDishes.salad.name} ${selectedDishes.salad.price}₽</p>`;
+        } else {
+            orderHTML += '<p>Не выбрано</p>';
+        }
+        orderHTML += '</div>';
+        
+        // Напиток
+        orderHTML += '<div class="order-category">';
+        orderHTML += '<h4>Напиток</h4>';
+        if (selectedDishes.drink) {
+            orderHTML += `<p>${selectedDishes.drink.name} ${selectedDishes.drink.price}₽</p>`;
+        } else {
+            orderHTML += '<p>Напиток не выбран</p>';
+        }
+        orderHTML += '</div>';
+        
+        // Десерт
+        orderHTML += '<div class="order-category">';
+        orderHTML += '<h4>Десерт</h4>';
+        if (selectedDishes.dessert) {
+            orderHTML += `<p>${selectedDishes.dessert.name} ${selectedDishes.dessert.price}₽</p>`;
+        } else {
+            orderHTML += '<p>Не выбран</p>';
+        }
+        orderHTML += '</div>';
     }
-    orderHTML += '</div>';
-    
-    // Главное блюдо
-    orderHTML += '<div class="order-category">';
-    orderHTML += '<h4>Главное блюдо</h4>';
-    if (selectedDishes.main) {
-        orderHTML += `<p>${selectedDishes.main.name} ${selectedDishes.main.price}₽</p>`;
-    } else {
-        orderHTML += '<p>Блюдо не выбрано</p>';
-    }
-    orderHTML += '</div>';
-    
-    // Напиток
-    orderHTML += '<div class="order-category">';
-    orderHTML += '<h4>Напиток</h4>';
-    if (selectedDishes.drink) {
-        orderHTML += `<p>${selectedDishes.drink.name} ${selectedDishes.drink.price}₽</p>`;
-    } else {
-        orderHTML += '<p>Напиток не выбран</p>';
-    }
-    orderHTML += '</div>';
     
     // Считаем итоговую стоимость
     const totalPrice = calculateTotal();
@@ -77,7 +101,9 @@ function calculateTotal() {
     let total = 0;
     if (selectedDishes.soup) total += selectedDishes.soup.price;
     if (selectedDishes.main) total += selectedDishes.main.price;
+    if (selectedDishes.salad) total += selectedDishes.salad.price;
     if (selectedDishes.drink) total += selectedDishes.drink.price;
+    if (selectedDishes.dessert) total += selectedDishes.dessert.price;
     return total;
 }
 
